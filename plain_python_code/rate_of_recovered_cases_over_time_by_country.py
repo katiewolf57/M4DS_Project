@@ -9,11 +9,6 @@ import re
 import warnings
 warnings.filterwarnings("ignore")
 
-## own stuff ##
-from main_functions import daily_increase
-from main_functions import moving_average
-from main_functions import get_country_info
-
 recoveries_df = pd.read_csv("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv")
 
 cols = recoveries_df.keys()

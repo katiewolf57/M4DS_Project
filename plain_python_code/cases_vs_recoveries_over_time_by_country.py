@@ -27,7 +27,6 @@ def get_country_info(country_name):
 
     return country_cases, country_recoveries
 
-## ~~CUMULATIVE CASES OVER TIME~~ ##
 
 def case_vs_recovery_plot(x, y1, y2, country):
     # window is set as 14 in in the beginning of the notebook 

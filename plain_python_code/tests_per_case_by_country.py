@@ -1,6 +1,5 @@
 # #!/usr/bin/env python3
 
-import numpy as np 
 import matplotlib.pyplot as plt
 import pandas as pd 
 import re
@@ -9,7 +8,7 @@ warnings.filterwarnings("ignore")
 
 
 ## Reading in Data ##
-df= pd.read_csv("https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv")
 
 
 def get_testing_info(country_name):
@@ -19,8 +18,6 @@ def get_testing_info(country_name):
 
 	dates = cleaned_data["date"].tolist()
 	tests_per_case = cleaned_data["tests_per_case"].tolist()
-
-	print(dates)
 
 	return dates, tests_per_case
 
@@ -35,9 +32,9 @@ def tests_per_case_plot(x, y, country_name):
 			months.append(month[0])
 
 
-	plt.figure(figsize = (12, 8))
+	plt.figure(figsize = (15, 8))
 	plt.plot(x, y)
-	plt.title("{} Tests per Case". format(country_name), size = 25)
+	plt.title("{} Tests per Case".format(country_name), size = 25)
 	plt.xlabel("Date", size = 20)
 	plt.ylabel("Tests per Case", size = 20)
 	plt.yticks(size = 10)
